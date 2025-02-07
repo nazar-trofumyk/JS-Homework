@@ -10,57 +10,73 @@
 // Євген Романенко | evgen_roman | StrongPass99
 // Василь Лисенко | vasyl_lys | VasyaCool777
 
-arr = [
-    {
-name:'Іван Петров',
-    username: ' ivan_petrov ',
-    password:'qwerty125162'
-    },
+arr=[
+     users ={
+    user1:{
 
-    user2 ={
-        name:'Марина Коваленко',
-        username: ' marina_kova ',
-        password:'Pass2024!'
+        name: 'Олег Сидорчук',
+        username: 'oleg_sid',
+        password: 'Oleg_7890',
     },
-    {
-        name:' Олег Сидорчук',
-        username: ' oleg_sid ',
-        password:'Oleg_7890'
-    },
-    {
-        name:'Тетяна Шевченко',
-        username: ' tanya_shev ',
-        password:'TanyaSecure1'
-    },
-    {
-        name:'Дмитро Бондаренко',
-        username: ' dima_bond ',
-        password:'Bond_007xyz'
-    },
-    {
-        name:'Оксана Гончар',
-        username: ' oksana_gon ',
-        password:'Sunshine22'
-    },
-    {
-        name:'Наталія Мельник',
-        username: ' nata_mel ',
-        password:'HappyDay2023'
-    },
-    {
-        name:'Євген Романенко',
-        username: ' evgen_roman ',
-        password:'qwerty125162'
-    },
-     {
-        name:'Іван Петров',
-        username: ' ivan_petrov ',
-        password:'StrongPass99'
-    },
-    {
-        name:'Андрій Ткаченко',
-        username: ' andriy_tkach ',
-        password:'Pass2024'
-    },
-]
-console.log(arr [0-9] .password)
+         user2:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+         user3:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+         user4:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+         user5:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+         user6:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+         user7:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+         user8:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+         user9:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+         user10:{
+
+             name: 'Олег Сидорчук',
+             username: 'oleg_sid',
+             password: 'Oleg_7890',
+         },
+
+
+     }
+     ]
+console.log(users.password)
+
+
+
