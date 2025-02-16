@@ -56,3 +56,66 @@ document.write(`<li> ${item}  </li>`)
  }
  let nav = ['menu','about','contact','help',false,true]
 liCreatorSecond(nav)
+// створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+let divCreator = (arr) =>{
+document.write(`<div class="container">`)
+ for (const item of arr) {
+  document.write(`<div class="box"><h1> NAME : ${item.name}</h1>
+<h2> AGE :${item.age} </h2>
+<h3> ID : ${item.id}</h3>
+</div>`)
+
+ }
+document.write(`</div>`)
+}
+
+let allUsers = [
+ {name:'Vasya',id:'1',age:55},
+ {name:'Vlad',id:'2',age:23},
+ {name:'Viktoria',id:'3',age:22},
+ {name:'Olya',id:'4',age:18},
+ {name:'Roman',id:'5',age:24},
+ {name:'Oleg',id:'6',age:20},
+ {name:'Nazar',id:'7',age:19}
+]
+divCreator(allUsers)
+// #pghbnSB
+// - створити функцію яка повертає найменьше число з масиву
+let smallNumber = (numbers) =>{
+let min = numbers[0]
+ for (const number of numbers) {
+  if (number < min){
+ min = number
+  }
+ }
+ return min
+}
+let arrNumbers = [12,4,554,6,76,8,4,7,84,8,57,8,967,0]
+smallNumber(arrNumbers)
+console.log(smallNumber(arrNumbers))
+
+// #EKRNVPM
+// - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+let sum = (arrSecond) =>{
+ let counter = 0
+ for (const arrElement of arrSecond) {
+  counter=counter + arrElement
+ }
+
+ return counter
+}
+
+
+let check = [1,2,10]
+sum(check)
+console.log(sum(check))
+    // #kpsbSQCt2Lf
+// - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
+let swap = (arr,index1,index2) =>{
+ let forSwap = arr[index1]
+ arr[index1] = arr[index2]
+ arr[index2] = forSwap
+}
+let swapArr = [11,22,44,66,77]
+swap(swapArr,0,1)
+console.log(swapArr)
