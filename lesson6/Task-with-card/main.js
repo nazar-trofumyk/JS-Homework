@@ -38,3 +38,4 @@ let findDiamond = cards.filter(item => item.cardSuit === 'diamond')
 console.log(findDiamond)
 let findClubs = cards.filter(item =>item.cardSuit === 'club' && item.value >= '9')
 console.log(findClubs)
+

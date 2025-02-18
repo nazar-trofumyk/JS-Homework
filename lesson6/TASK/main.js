@@ -171,5 +171,6 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
-let findSass = coursesArray.filter(item => item.modules ==='sass')
-console.log(findSass)
+console.log(coursesArray.filter(course => {
+    return course.modules.includes('sass');
+}));
