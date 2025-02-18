@@ -96,5 +96,5 @@ let mapedUsers = users.map(function (value,index){
 console.log(mapedUsers)
 
 let find = users.find(value =>value.status ===false)
-console.log(find)
+console.log(find) 
 console.log(users.every(value => value.status))
