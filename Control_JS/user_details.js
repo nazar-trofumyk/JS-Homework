@@ -29,7 +29,9 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
 
         }
 
-        wrapper.classList.add('wrapper_user')
-        block.appendChild(wrapper)
+wrapper.classList.add('wrapper_user')
+block.appendChild(wrapper)
+
+
 
     })

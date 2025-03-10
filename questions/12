@@ -1,0 +1,60 @@
+1- це мій обєкт
+ {
+ "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  2-я його ітерую,щоб не писати все руцями
+   .then(response => response.json())
+      .then(user => {
+ console.log(user)
+ let wrapper = document.createElement('div' )
+ for (const userKey in user) {
+     let p = document.createElement('p')
+     let item = user[userKey]
+     if (typeof item ==='object' ){
+         let list =document.createElement('ul')
+         for (const key in item) {
+             let li = document.createElement('li')
+             li.innerText = `${key} ${item[key]}`
+             list.appendChild(li)
+         }
+         wrapper.appendChild(p)
+         wrapper.appendChild(list)
+     }else { p.innerText =`${userKey} :${user[userKey]}`
+         wrapper.appendChild(p)}
+
+ }
+ wrapper.classList.add('wrapper_user')
+ block.appendChild(wrapper)
+
+
+
+     })
+
+3-тут я хочу для  address та "company" створити список але в адресі є ще обєкт geo і він в мене виводиться на сторінку як  geo:object object ,питання як вирішити цю проблему запитав у джпт він мені написав таку конструкцію чи вірна вона?
+  for (const key in item) {
+                    let li = document.createElement('li');
+                    if (typeof item[key] === 'object') {
+                        li.innerText = `${key}: { Lat: ${item[key].lat}, Lng: ${item[key].lng} }`; // Для geo виводимо lat і lng
+                    } else {
+                        li.innerText = `${key}: ${item[key]}`;
+                    }
