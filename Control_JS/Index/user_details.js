@@ -12,6 +12,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
             let item = user[userKey]
             if (typeof item ==='object' ){
                 let list =document.createElement('ul')
+                list.classList.add('list')
                 list.innerText=`${userKey}`
                 for (const key in item) {
                     let li = document.createElement('li')
@@ -36,3 +37,29 @@ let btn = document.getElementsByClassName('back')[0]
 btn.onclick= function (){
     location.href='index.html'
 }
+
+let postRep = false
+let btnPost = document.getElementsByClassName('post')[0]
+btnPost.onclick = function (){
+    if (postRep){return}
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
+        .then(response => response.json())
+        .then(posts => {
+            console.log(posts);
+        let postUser = document.getElementsByClassName('post_user')[0]
+            for (const post of posts) {
+                let divPost = document.createElement("div")
+            divPost.classList.add('divPost')
+                let title = document.createElement('h2')
+                title.innerText =`${post.title}`
+                divPost.appendChild(title)
+                postUser.appendChild(divPost)
+            }
+postRep = true
+
+
+
+
+        })
+}
+
