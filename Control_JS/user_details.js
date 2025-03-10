@@ -28,10 +28,11 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
                 wrapper.appendChild(p)}
 
         }
-
 wrapper.classList.add('wrapper_user')
 block.appendChild(wrapper)
 
-
-
     })
+let btn = document.getElementsByClassName('back')[0]
+btn.onclick= function (){
+    location.href='index.html'
+}
