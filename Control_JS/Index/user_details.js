@@ -51,8 +51,14 @@ btnPost.onclick = function (){
                 let divPost = document.createElement("div")
             divPost.classList.add('divPost')
                 let title = document.createElement('h2')
-                title.innerText =`${post.title}`
-                divPost.appendChild(title)
+                title.innerText =`${post.title}...`
+                const btnPostDetails =document.createElement("button")
+               btnPostDetails.classList.add('btn-post-details')
+                btnPostDetails.innerText = 'Details'
+                btnPostDetails.onclick = function (){
+                    location.href=`post-details.html?id=${post.id}`
+                }
+                divPost.append(title,btnPostDetails)
                 postUser.appendChild(divPost)
             }
 postRep = true

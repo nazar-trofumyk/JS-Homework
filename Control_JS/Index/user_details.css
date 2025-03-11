@@ -74,7 +74,7 @@ flex-wrap: wrap;
 /*-----------post-------*/
 .post{
     font-size: 20px;
-    border-radius: 20px;
+border-radius: 20px;
     width: 90%;
     transition: 0.5s;
     cursor: pointer;
@@ -90,12 +90,25 @@ flex-wrap: wrap;
     gap: 20px;
 }
 .divPost{
+    text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 150px;
     align-items: center;
-    width: 400px;
+    width: 350px;
     flex-direction: column;
-    border: 1px solid;
-background-color: deeppink;
+gap: 20px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.btn-post-details{
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid lightgreen;
+    width: 40%;
+    height: 25px;
+}
+h2{
+    height: 40%;
 }
